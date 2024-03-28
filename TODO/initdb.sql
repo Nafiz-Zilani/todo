@@ -1,0 +1,25 @@
+CREATE DATABASE mysql_db;
+USE mysql_db;  
+CREATE TABLE `tasks` (
+  `id` int NOT NULL,
+  `task` varchar(255) NOT NULL,
+  `date` date NOT NULL,
+  `complete` int NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+ALTER TABLE `tasks`
+ADD PRIMARY KEY (`id`);
+ALTER TABLE `tasks`
+MODIFY `id` int NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+-- CREATE DATABASE IF NOT EXISTS mysql_db;
+-- USE mysql_db;
+-- CREATE TABLE IF NOT EXISTS tasks (
+--   id INT PRIMARY KEY,
+--   task VARCHAR(255) NOT NULL,
+--   date DATE NOT NULL,
+--   complete INT NOT NULL DEFAULT 0
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+-- ALTER TABLE tasks ADD PRIMARY KEY (id);
+-- ALTER TABLE tasks MODIFY id INT NOT NULL AUTO_INCREMENT;
+-- COMMIT;
